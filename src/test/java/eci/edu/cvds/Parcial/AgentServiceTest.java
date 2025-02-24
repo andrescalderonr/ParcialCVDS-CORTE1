@@ -15,10 +15,29 @@ public class AgentServiceTest {
     public void addProductTest(){
         ServiecAgent service = new ServiecAgent();
         Product product = new Product("ps5", 10,10,"electronic");
-        if(){
-
-        }
+        assertTrue(service.add(product));
+    }
+    @Test
+    public void updateProductTest(){
+        ServiecAgent service = new ServiecAgent();
+        Product product = new Product("ps5", 10,10,"electronic");
+        service.add(product);
+        assertTrue(service.update("ps5",15));
     }
 
+    @Test
+    public void notUpdateProductTestWithNotAddedProduct(){
+        ServiecAgent service = new ServiecAgent();
+        Product product = new Product("ps5", 10,10,"electronic");
+        service.add(product);
+        assertFalse(service.update("ps4",15));
+    }
 
+    @Test
+    public void notUpdateProductTestWithNegativeQuantity(){
+        ServiecAgent service = new ServiecAgent();
+        Product product = new Product("ps5", 10,10,"electronic");
+        service.add(product);
+        assertFalse(service.update("ps5",-10));
+    }
 }

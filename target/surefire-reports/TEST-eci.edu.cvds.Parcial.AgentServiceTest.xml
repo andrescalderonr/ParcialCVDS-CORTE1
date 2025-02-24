@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="eci.edu.cvds.Parcial.ParcialApplicationTests" time="2.455" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="eci.edu.cvds.Parcial.AgentServiceTest" time="0.105" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -12,7 +12,6 @@
     <property name="user.timezone" value="America/Bogota"/>
     <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="17"/>
-    <property name="APPLICATION_NAME" value="Parcial"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
@@ -31,8 +30,6 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="FILE_LOG_CHARSET" value="windows-1252"/>
-    <property name="java.awt.headless" value="true"/>
     <property name="surefire.real.class.path" value="C:\Users\andres.calderon-r\AppData\Local\Temp\surefire68700337598921758\surefirebooter-20250224125241183_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -50,9 +47,7 @@
     <property name="user.dir" value="C:\Users\andres.calderon-r\Downloads\ParcialCVDS-CORTE1"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="19008"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
     <property name="native.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Python311\Scripts\;C:\Program Files\Python311\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk-21\bin;C:\Program Files\Java\jdk-1.8\bin;C:\Program Files\Java\jdk-1.8\bin;C:\Program Files\PuTTY\;C:\Program Files\Maven\apache-maven-3.9.6\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files\swipl\bin;C:\Program Files\PowerShell\7\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Gradle\gradle-8.11\bin;C:\Program Files\MongoDB\Server\8.0\bin;C:\Program Files\mongosh;C:\Users\andres.calderon-r\AppData\Local\Microsoft\WindowsApps;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
@@ -60,24 +55,7 @@
     <property name="java.vm.version" value="17.0.10+11-LTS-240"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
-    <property name="LOGGED_APPLICATION_NAME" value="[Parcial] "/>
   </properties>
-  <testcase name="contextLoads" classname="eci.edu.cvds.Parcial.ParcialApplicationTests" time="0.64">
-    <system-out><![CDATA[12:52:42.747 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [eci.edu.cvds.Parcial.ParcialApplicationTests]: ParcialApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-12:52:42.987 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration eci.edu.cvds.Parcial.ParcialApplication for test class eci.edu.cvds.Parcial.ParcialApplicationTests
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
-
- :: Spring Boot ::                (v3.4.3)
-
-2025-02-24T12:52:43.640-05:00  INFO 19008 --- [Parcial] [           main] e.e.c.Parcial.ParcialApplicationTests    : Starting ParcialApplicationTests using Java 17.0.10 with PID 19008 (started by andres.calderon-r in C:\Users\andres.calderon-r\Downloads\ParcialCVDS-CORTE1)
-2025-02-24T12:52:43.642-05:00  INFO 19008 --- [Parcial] [           main] e.e.c.Parcial.ParcialApplicationTests    : No active profile set, falling back to 1 default profile: "default"
-2025-02-24T12:52:44.152-05:00  INFO 19008 --- [Parcial] [           main] e.e.c.Parcial.ParcialApplicationTests    : Started ParcialApplicationTests in 0.839 seconds (process running for 2.898)
-]]></system-out>
-  </testcase>
+  <testcase name="addProductTest" classname="eci.edu.cvds.Parcial.AgentServiceTest" time="0.045"/>
+  <testcase name="updateProductTest" classname="eci.edu.cvds.Parcial.AgentServiceTest" time="0.001"/>
 </testsuite>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ServiecAgent.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Parcial</a> &gt; <a href="index.source.html" class="el_package">eci.edu.cvds.Parcial.service</a> &gt; <span class="el_source">ServiecAgent.java</span></div><h1>ServiecAgent.java</h1><pre class="source lang-java linenums">package eci.edu.cvds.Parcial.service;
+
+import eci.edu.cvds.Parcial.model.AgentWarning;
+import eci.edu.cvds.Parcial.model.Agentlog;
+import eci.edu.cvds.Parcial.model.Agents;
+import eci.edu.cvds.Parcial.model.Product;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class ServiecAgent{
+    private Map&lt;String, Product&gt; products;
+<span class="fc" id="L14">    private Agents agentLog = new Agentlog();</span>
+<span class="fc" id="L15">    private Agents agentWarn = new AgentWarning();</span>
+
+<span class="fc" id="L17">    public ServiecAgent(){</span>
+<span class="fc" id="L18">        products = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L19">        this.agentLog = agentLog;</span>
+<span class="fc" id="L20">        this.agentWarn = agentWarn;</span>
+<span class="fc" id="L21">    }</span>
+
+
+    public boolean add(Product product) {
+<span class="pc bpc" id="L25" title="1 of 2 branches missed.">        if(!productIsOk(product)){</span>
+<span class="nc" id="L26">            return false;</span>
+        }
+<span class="fc" id="L28">        String name = product.getName();</span>
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">        if(products.containsKey(name)){</span>
+<span class="nc" id="L30">            return false;</span>
+        }
+<span class="fc" id="L32">        products.put(name,product);</span>
+<span class="fc" id="L33">        return true;</span>
+    }
+
+    public boolean update(String name, int quantity) {
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if(quantity &lt; 0){</span>
+<span class="nc" id="L38">            return false;</span>
+        }
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        if(!products.containsKey(name)) {</span>
+<span class="nc" id="L41">            return false;</span>
+        }
+<span class="nc" id="L43">        Product product = products.get(name);</span>
+<span class="nc" id="L44">        product.setQuantity(quantity);</span>
+<span class="nc" id="L45">        notifyAgents(product);</span>
+<span class="nc" id="L46">        return true;</span>
+    }
+
+    public void delete(String name) {
+<span class="nc" id="L50">        products.remove(name);</span>
+<span class="nc" id="L51">    }</span>
+
+    public List&lt;Product&gt; getAllProduct() {
+<span class="nc" id="L54">        return products.values().stream().toList();</span>
+    }
+
+    public void notifyAgents(Product product) {
+<span class="nc" id="L58">        agentLog.Change(product);</span>
+<span class="nc" id="L59">        agentWarn.Change(product);</span>
+<span class="nc" id="L60">    }</span>
+
+    private boolean productIsOk(Product product){
+
+<span class="pc bpc" id="L64" title="1 of 2 branches missed.">        if (product == null) return false;</span>
+
+<span class="fc" id="L66">        String name = product.getName();</span>
+<span class="fc" id="L67">        int price = product.getPrice();</span>
+<span class="fc" id="L68">        int quantity = product.getQuantity();</span>
+<span class="fc" id="L69">        String category = product.getCategory();</span>
+
+<span class="pc bpc" id="L71" title="2 of 4 branches missed.">        if (!validateString(name) || !validateString(category)) {</span>
+<span class="nc" id="L72">            return false;</span>
+        }
+
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">        if (quantity &lt; 0){</span>
+<span class="nc" id="L76">            return false;</span>
+        }
+<span class="pc bpc" id="L78" title="1 of 2 branches missed.">        if (price &lt; 0) {</span>
+<span class="nc" id="L79">            return false;</span>
+        }
+<span class="fc" id="L81">        return true;</span>
+    }
+
+    private boolean validateString(String param){
+<span class="pc bpc" id="L85" title="2 of 4 branches missed.">        return param != null &amp;&amp; !param.isEmpty();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
