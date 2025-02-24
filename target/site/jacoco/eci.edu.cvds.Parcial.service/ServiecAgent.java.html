@@ -34,16 +34,16 @@ public class ServiecAgent{
     }
 
     public boolean update(String name, int quantity) {
-<span class="nc bnc" id="L37" title="All 2 branches missed.">        if(quantity &lt; 0){</span>
-<span class="nc" id="L38">            return false;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if(quantity &lt; 0){</span>
+<span class="fc" id="L38">            return false;</span>
         }
-<span class="nc bnc" id="L40" title="All 2 branches missed.">        if(!products.containsKey(name)) {</span>
-<span class="nc" id="L41">            return false;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if(!products.containsKey(name)) {</span>
+<span class="fc" id="L41">            return false;</span>
         }
-<span class="nc" id="L43">        Product product = products.get(name);</span>
-<span class="nc" id="L44">        product.setQuantity(quantity);</span>
-<span class="nc" id="L45">        notifyAgents(product);</span>
-<span class="nc" id="L46">        return true;</span>
+<span class="fc" id="L43">        Product product = products.get(name);</span>
+<span class="fc" id="L44">        product.setQuantity(quantity);</span>
+<span class="fc" id="L45">        notifyAgents(product);</span>
+<span class="fc" id="L46">        return true;</span>
     }
 
     public void delete(String name) {
@@ -55,9 +55,9 @@ public class ServiecAgent{
     }
 
     public void notifyAgents(Product product) {
-<span class="nc" id="L58">        agentLog.Change(product);</span>
-<span class="nc" id="L59">        agentWarn.Change(product);</span>
-<span class="nc" id="L60">    }</span>
+<span class="fc" id="L58">        agentLog.Change(product);</span>
+<span class="fc" id="L59">        agentWarn.Change(product);</span>
+<span class="fc" id="L60">    }</span>
 
     private boolean productIsOk(Product product){
 

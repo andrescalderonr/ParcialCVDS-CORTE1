@@ -40,4 +40,10 @@ public class AgentServiceTest {
         service.add(product);
         assertFalse(service.update("ps5",-10));
     }
+    @Test
+    public void productIsNotOk(){
+        ServiecAgent service = new ServiecAgent();
+        Product product = new Product(null, 10,10,"electronic");
+        assertFalse(service.add(product));
+    }
 }
