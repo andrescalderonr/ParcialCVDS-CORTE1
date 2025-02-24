@@ -1,0 +1,7 @@
+eci\edu\cvds\Parcial\ParcialApplication.class
+eci\edu\cvds\Parcial\service\ServiecAgent.class
+eci\edu\cvds\Parcial\model\Agentlog.class
+eci\edu\cvds\Parcial\controller\StockController.class
+eci\edu\cvds\Parcial\model\AgentWarning.class
+eci\edu\cvds\Parcial\model\Agents.class
+eci\edu\cvds\Parcial\model\Product.class

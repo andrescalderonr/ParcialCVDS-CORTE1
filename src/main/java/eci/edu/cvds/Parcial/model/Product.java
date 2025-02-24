@@ -12,7 +12,7 @@ public class Product {
         this.quantity = quantity;
         this.category = category;
     }
-    public String getname(){
+    public String getName(){
         return name;
     }
 

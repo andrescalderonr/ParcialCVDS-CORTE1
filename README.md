@@ -10,3 +10,5 @@ En el parcial los agents son los que necesitan las informacion de los productos,
 
 # Documentacion:
 
+![iamge](Assets/Diagrama.png)
+
